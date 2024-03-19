@@ -1,0 +1,13 @@
+.clik-id__block {
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+
+.clik-id__content {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	flex: 1 1 auto;
+}

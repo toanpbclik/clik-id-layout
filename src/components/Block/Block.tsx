@@ -20,9 +20,9 @@ interface Props extends React.CSSProperties {
 	 */
 	padding?: string | number;
 	/**
-	 * CSS Property: border
+	 * CSS Property: border-bottom
 	 */
-	border?: string;
+	borderBottom?: string;
 	/**
 	 * Children Component
 	 */
@@ -30,27 +30,28 @@ interface Props extends React.CSSProperties {
 }
 
 /**
- * Layout Level with CSS Properties
+ * Block with CSS Properties
  */
-const LayoutLevel = ({
+const Block = ({
 	backgroundColor = "#fff",
 	width = "100%",
-	height = "100%",
-	padding = 16,
-	border = "1px solid rgba(34, 34, 34, 0.1)",
+	height = "34px",
+	padding = "8px 12px",
+	borderBottom = "1px solid rgba(34, 34, 34, 0.1)",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__layout-level"
+			className="clik-id__block"
 			style={{
 				...props,
 				backgroundColor,
 				width,
 				height,
 				padding,
-				border,
+				borderBottom,
+				flex: "0 0 34px",
 			}}
 		>
 			{children}
@@ -58,4 +59,4 @@ const LayoutLevel = ({
 	);
 };
 
-export default LayoutLevel;
+export default Block;

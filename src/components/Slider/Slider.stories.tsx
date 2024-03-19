@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import LayoutLevel from "../LayoutLevel/LayoutLevel";
@@ -16,114 +16,188 @@ const meta: Meta<typeof Slider> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/**
+ * Layout Screen with Layout Level and Slider UI Components
+ *
+ * Toggle Left/Right Sliders by clicking on the same named buttons in the header
+ */
 export const LayoutScreen: Story = {
-	render: () => (
-		<div
-			style={{
-				position: "relative",
-				width: "100%",
-				height: 400,
-				display: "grid",
-				gridTemplateAreas: `'header header' 'menu-left main-content'`,
-				gridTemplateRows: "var(--layout-level-header--height) 1fr",
-				gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
-			}}
-		>
-			<LayoutLevel
-				backgroundColor="#ffd591"
-				height="var(--layout-level-header--height)"
-				padding="4px 16px"
-				gridArea="header"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#b7eB8f"
-				width="var(--layout-level-menu-left--width)"
-				paddingLeft={12}
-				gridArea="menu-left"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#87e8de"
-				padding={0}
-				gridArea="main-content"
-			/>
-			<Slider backgroundColor="#b7eB8f" />
-			<Slider mode="right" backgroundColor="#b7eB8f" />
-		</div>
-	),
+	render: () => {
+		const [isLeftShown, setLeftShown] = useState<boolean>(false);
+		const [isRightShown, setRightShown] = useState<boolean>(false);
+
+		return (
+			<div
+				style={{
+					position: "relative",
+					width: "100%",
+					height: 400,
+					display: "grid",
+					gridTemplateAreas: `'header header' 'menu-left main-content'`,
+					gridTemplateRows: "var(--layout-level-header--height) 1fr",
+					gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
+					overflow: "hidden",
+				}}
+			>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					height="var(--layout-level-header--height)"
+					padding="4px 16px"
+					gridArea="header"
+					zIndex={2}
+				>
+					<button
+						onClick={(e) => {
+							e.preventDefault();
+							e.stopPropagation();
+
+							setLeftShown(!isLeftShown);
+						}}
+					>
+						Left
+					</button>
+					<button
+						onClick={(e) => {
+							e.preventDefault();
+							e.stopPropagation();
+
+							setRightShown(!isRightShown);
+						}}
+					>
+						Right
+					</button>
+				</LayoutLevel>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					width="var(--layout-level-menu-left--width)"
+					paddingLeft={12}
+					gridArea="menu-left"
+					zIndex={2}
+				/>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					padding={0}
+					gridArea="main-content"
+				/>
+				<Slider isShown={isLeftShown} backgroundColor="#b7eB8f" />
+				<Slider isShown={isRightShown} mode="right" backgroundColor="#b7eB8f" />
+			</div>
+		);
+	},
 };
 
+/**
+ * Layout Screen with Layout Level and Slider UI Components
+ *
+ * Toggle Left Sliders by clicking on the left button in the header
+ */
 export const SliderLeft: Story = {
-	render: () => (
-		<div
-			style={{
-				position: "relative",
-				width: "100%",
-				height: 400,
-				display: "grid",
-				gridTemplateAreas: `'header header' 'menu-left main-content'`,
-				gridTemplateRows: "var(--layout-level-header--height) 1fr",
-				gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
-			}}
-		>
-			<LayoutLevel
-				backgroundColor="#ffd591"
-				height="var(--layout-level-header--height)"
-				padding="4px 16px"
-				gridArea="header"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#b7eB8f"
-				width="var(--layout-level-menu-left--width)"
-				paddingLeft={12}
-				gridArea="menu-left"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#87e8de"
-				padding={0}
-				gridArea="main-content"
-			/>
-			<Slider backgroundColor="#b7eB8f" />
-		</div>
-	),
+	render: () => {
+		const [isLeftShown, setLeftShown] = useState<boolean>(false);
+
+		return (
+			<div
+				style={{
+					position: "relative",
+					width: "100%",
+					height: 400,
+					display: "grid",
+					gridTemplateAreas: `'header header' 'menu-left main-content'`,
+					gridTemplateRows: "var(--layout-level-header--height) 1fr",
+					gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
+					overflow: "hidden",
+				}}
+			>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					height="var(--layout-level-header--height)"
+					padding="4px 16px"
+					gridArea="header"
+					zIndex={2}
+				>
+					<button
+						onClick={(e) => {
+							e.preventDefault();
+							e.stopPropagation();
+
+							setLeftShown(!isLeftShown);
+						}}
+					>
+						Left
+					</button>
+				</LayoutLevel>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					width="var(--layout-level-menu-left--width)"
+					paddingLeft={12}
+					gridArea="menu-left"
+					zIndex={2}
+				/>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					padding={0}
+					gridArea="main-content"
+				/>
+				<Slider isShown={isLeftShown} backgroundColor="#b7eB8f" />
+			</div>
+		);
+	},
 };
 
+/**
+ * Layout Screen with Layout Level and Slider UI Components
+ *
+ * Toggle Right Sliders by clicking on the right button in the header
+ */
 export const SliderRight: Story = {
-	render: () => (
-		<div
-			style={{
-				position: "relative",
-				width: "100%",
-				height: 400,
-				display: "grid",
-				gridTemplateAreas: `'header header' 'menu-left main-content'`,
-				gridTemplateRows: "var(--layout-level-header--height) 1fr",
-				gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
-			}}
-		>
-			<LayoutLevel
-				backgroundColor="#ffd591"
-				height="var(--layout-level-header--height)"
-				padding="4px 16px"
-				gridArea="header"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#b7eB8f"
-				width="var(--layout-level-menu-left--width)"
-				paddingLeft={12}
-				gridArea="menu-left"
-				zIndex={2}
-			/>
-			<LayoutLevel
-				backgroundColor="#87e8de"
-				padding={0}
-				gridArea="main-content"
-			/>
-			<Slider mode="right" backgroundColor="#b7eB8f" />
-		</div>
-	),
+	render: () => {
+		const [isRightShown, setRightShown] = useState<boolean>(false);
+
+		return (
+			<div
+				style={{
+					position: "relative",
+					width: "100%",
+					height: 400,
+					display: "grid",
+					gridTemplateAreas: `'header header' 'menu-left main-content'`,
+					gridTemplateRows: "var(--layout-level-header--height) 1fr",
+					gridTemplateColumns: "var(--layout-level-menu-left--width) 1fr",
+					overflow: "hidden",
+				}}
+			>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					height="var(--layout-level-header--height)"
+					padding="4px 16px"
+					gridArea="header"
+					zIndex={2}
+				>
+					<button
+						onClick={(e) => {
+							e.preventDefault();
+							e.stopPropagation();
+
+							setRightShown(!isRightShown);
+						}}
+					>
+						Right
+					</button>
+				</LayoutLevel>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					width="var(--layout-level-menu-left--width)"
+					paddingLeft={12}
+					gridArea="menu-left"
+					zIndex={2}
+				/>
+				<LayoutLevel
+					backgroundColor="#dfdfdf"
+					padding={0}
+					gridArea="main-content"
+				/>
+				<Slider isShown={isRightShown} mode="right" backgroundColor="#b7eB8f" />
+			</div>
+		);
+	},
 };

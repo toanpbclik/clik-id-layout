@@ -30,20 +30,20 @@ interface Props extends React.CSSProperties {
 }
 
 /**
- * Layout Level with CSS Properties
+ * Block with CSS Properties
  */
-const LayoutLevel = ({
+const Quotation = ({
 	backgroundColor = "#fff",
 	width = "100%",
 	height = "100%",
-	padding = 16,
+	padding = "16px",
 	border = "1px solid rgba(34, 34, 34, 0.1)",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__layout-level"
+			className="clik-id__quotation"
 			style={{
 				...props,
 				backgroundColor,
@@ -58,4 +58,4 @@ const LayoutLevel = ({
 	);
 };
 
-export default LayoutLevel;
+export default Quotation;

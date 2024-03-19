@@ -1,0 +1,9 @@
+.clik-id__quotation {
+	border-radius: 16px;
+	box-sizing: border-box;
+	max-height: 560px;
+	max-width: 480px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+}
