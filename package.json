@@ -1,45 +1,65 @@
 {
-  "name": "clik-id-layout",
-  "version": "0.1.2",
-  "type": "module",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.4.18",
-    "classnames": "^2.5.1",
-    "postcss": "^8.4.36",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^1.2.23",
-    "@storybook/addon-essentials": "^8.0.1",
-    "@storybook/addon-interactions": "^8.0.1",
-    "@storybook/addon-links": "^8.0.1",
-    "@storybook/addon-onboarding": "^8.0.1",
-    "@storybook/addon-styling-webpack": "^1.0.0",
-    "@storybook/blocks": "^8.0.1",
-    "@storybook/react": "^8.0.1",
-    "@storybook/react-vite": "^8.0.1",
-    "@storybook/test": "^8.0.1",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^8.0.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.6"
-  }
+	"name": "clik-id-layout",
+	"version": "0.0.2",
+	"description": "Artizen React Components Libarary",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts",
+	"repository": "https://github.com/toanpbclik/clik-id-layout",
+	"homepage": "",
+	"author": "",
+	"license": "MIT",
+	"scripts": {
+		"rollup-build-lib": "rollup -c",
+		"storybook": "storybook dev -p 6006",
+		"storybook-docs": "storybook dev --docs",
+		"build-storybook": "storybook build",
+		"build-storybook-docs": "storybook build --docs"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.23.2",
+		"@babel/preset-react": "^7.22.15",
+		"@babel/preset-typescript": "^7.23.2",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.5",
+		"@storybook/addon-essentials": "^7.5.1",
+		"@storybook/addon-interactions": "^7.5.1",
+		"@storybook/addon-links": "^7.5.1",
+		"@storybook/blocks": "^7.5.1",
+		"@storybook/react": "^7.5.1",
+		"@storybook/react-webpack5": "^7.5.1",
+		"@storybook/testing-library": "^0.2.2",
+		"@types/react": "^18.2.33",
+		"postcss": "^8.4.31",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup": "^4.1.5",
+		"rollup-plugin-dts": "^6.1.0",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.2",
+		"storybook": "^7.5.1",
+		"storybook-addon-deep-controls": "^0.3.0",
+		"tslib": "^2.6.2",
+		"typescript": "^5.2.2"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"keywords": [
+		"clik-id-layout",
+		"react",
+		"component",
+		"components",
+		"react-component",
+		"design",
+		"library",
+		"framework",
+		"frontend"
+	]
 }

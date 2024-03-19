@@ -1,0 +1,31 @@
+:root {
+	--slider-right--width: 272px;
+	--slider-left--width: 224px;
+	--animation-duration: 0.3s;
+}
+
+.clik-id__slider.clik-id__slider--left {
+	animation: var(--animation-duration) animation--roll-right;
+}
+
+.clik-id__slider.clik-id__slider--right {
+	animation: var(--animation-duration) animation--roll-left;
+}
+
+@keyframes animation--roll-left {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes animation--roll-right {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

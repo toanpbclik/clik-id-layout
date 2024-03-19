@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+## ✨ Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 🏭 Enterprise-class UI designed for web applications.
+- 📦 A set of high-quality React components out of the box.
+- 🛡 Written in TypeScript with predictable static types.
+- 🎨 Powerful theme customization based on CSS-in-JS.
 
-Currently, two official plugins are available:
+## 🖥 Environment Support
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern browsers
+- Server-side Rendering
+- [Electron](https://www.electronjs.org/)
 
-## Expanding the ESLint configuration
+## 📦 Install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install clik-id-layout
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```bash
+yarn add clik-id-layout
+```
+
+```bash
+pnpm add clik-id-layout
+```
+
+## 🔨 Usage
+
+```jsx
+import React from "react";
+import { LayoutLevel } from "clik-id-layout";
+
+const App = () => (
+	<>
+		<LayoutLevel />
+	</>
+);
+```
+
+### TypeScript
+
+`clik-id-layout` is written in TypeScript with complete definitions.
