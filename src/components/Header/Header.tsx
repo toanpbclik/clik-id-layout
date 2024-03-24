@@ -4,17 +4,27 @@ import "./style.css";
 
 interface Props {
 	title: string;
+	iconName?: string;
 	backgroundColor?: string;
 	color?: string;
 }
 
 /**
- * Block with CSS Properties
+ * Header component
  */
-const Header = ({ title, backgroundColor = "#fff", color = "#222" }: Props) => {
+const Header = ({
+	title,
+	iconName = "id-layout-icon-ListPlus",
+	backgroundColor = "#fff",
+	color = "#222",
+}: Props) => {
 	if (!title) return null;
 	return (
-		<div className="clik-id__header" style={{ backgroundColor, color }}>
+		<div
+			className="clik-id__header"
+			style={{ backgroundColor, ["--clik-id-header--color" as string]: color }}
+		>
+			<i className={iconName} />
 			<span>{title}</span>
 		</div>
 	);

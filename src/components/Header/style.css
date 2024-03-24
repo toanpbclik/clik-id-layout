@@ -1,6 +1,6 @@
 .clik-id__header {
 	border-bottom: 1px solid #ddd;
-	color: #222;
+	color: var(--clik-id-header--color);
 	display: flex;
 	font-size: 14px;
 	font-style: normal;
@@ -15,5 +15,5 @@
 }
 
 .clik-id__header i[class^="id-layout-icon-"]::before {
-	color: #222;
+	color: var(--clik-id-header--color);
 }

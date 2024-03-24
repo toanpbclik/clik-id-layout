@@ -8,6 +8,7 @@ const config: StorybookConfig = {
 		"@storybook/addon-interactions",
 		"storybook-addon-deep-controls",
 		"@storybook/addon-webpack5-compiler-babel",
+		"@storybook/addon-styling",
 	],
 	framework: {
 		name: "@storybook/react-webpack5",
