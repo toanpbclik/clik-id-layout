@@ -6,7 +6,7 @@ import Slider from "./Slider";
 
 const meta: Meta<typeof Slider> = {
 	component: Slider,
-	title: "Components/Slider",
+	title: "Components/Slider/Right",
 	tags: ["autodocs"],
 	argTypes: {
 		backgroundColor: { control: "color" },
@@ -19,11 +19,11 @@ type Story = StoryObj<typeof meta>;
 /**
  * Layout Screen with Layout Level and Slider UI Components
  *
- * Toggle Left/Right Sliders by clicking on the same named buttons in the header
+ * Toggle Right Sliders by clicking on the right button in the header
  */
-export const LayoutScreen: Story = {
-	render: () => {
-		const [isLeftShown, setLeftShown] = useState<boolean>(false);
+export const SliderRight: Story = {
+	args: { backgroundColor: "#b7eB8f", mode: "right" },
+	render: (args) => {
 		const [isRightShown, setRightShown] = useState<boolean>(false);
 
 		return (
@@ -51,20 +51,10 @@ export const LayoutScreen: Story = {
 							e.preventDefault();
 							e.stopPropagation();
 
-							setLeftShown(!isLeftShown);
-						}}
-					>
-						Left
-					</button>
-					<button
-						onClick={(e) => {
-							e.preventDefault();
-							e.stopPropagation();
-
 							setRightShown(!isRightShown);
 						}}
 					>
-						Right
+						Toggle
 					</button>
 				</LayoutLevel>
 				<LayoutLevel
@@ -79,8 +69,7 @@ export const LayoutScreen: Story = {
 					padding={0}
 					gridArea="main-content"
 				/>
-				<Slider isShown={isLeftShown} backgroundColor="#b7eB8f" />
-				<Slider isShown={isRightShown} mode="right" backgroundColor="#b7eB8f" />
+				<Slider isShown={isRightShown} {...args} />
 			</div>
 		);
 	},

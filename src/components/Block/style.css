@@ -6,8 +6,19 @@
 
 .clik-id__content {
 	box-sizing: border-box;
+	flex: 1 1 auto;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
-	flex: 1 1 auto;
+}
+
+.clik-id__content:not(.clik-id__content--scrollbar)::-webkit-scrollbar {
+	display: none;
+}
+
+.clik-id__slider .clik-id__content {
+	display: grid;
+	gap: 4px;
+	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(100%, 1fr));
 }

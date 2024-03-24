@@ -20,6 +20,10 @@ interface Props extends React.CSSProperties {
 	 */
 	padding?: string | number;
 	/**
+	 * Flag to show scrollbar
+	 */
+	isScrollbarShown?: boolean;
+	/**
 	 * Children Component
 	 */
 	children?: React.ReactNode;
@@ -37,12 +41,16 @@ const Content = ({
 	width = "100%",
 	height = "100%",
 	padding = "12px",
+	isScrollbarShown = false,
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__content"
+			className={[
+				"clik-id__content",
+				isScrollbarShown ? "clik-id__content--scrollbar" : "",
+			].join(" ")}
 			style={{
 				...props,
 				backgroundColor,
