@@ -17,9 +17,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * Layout Screen with Layout Level and Breadcrumb UI Components
+ * Example with Layout Level and Breadcrumb UI Components
  */
-export const LayoutScreen: Story = {
+export const Example: Story = {
 	render: () => {
 		return (
 			<div

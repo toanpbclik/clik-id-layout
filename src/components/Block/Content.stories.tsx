@@ -18,11 +18,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * Content with Content UI Component
+ * Example with Content UI Component
  *
  * Inside a Slider UI Component with Header by using Block UI Component
  */
-export const Content: Story = {
+export const Example: Story = {
 	render: () => (
 		<div
 			style={{

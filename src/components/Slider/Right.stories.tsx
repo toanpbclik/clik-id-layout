@@ -17,11 +17,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * Layout Screen with Layout Level and Slider UI Components
+ * Example with Layout Level and Slider UI Components
  *
  * Toggle Right Sliders by clicking on the right button in the header
  */
-export const SliderRight: Story = {
+export const Example: Story = {
 	args: { backgroundColor: "#b7eB8f", mode: "right" },
 	render: (args) => {
 		const [isRightShown, setRightShown] = useState<boolean>(false);

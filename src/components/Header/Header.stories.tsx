@@ -12,8 +12,6 @@ const meta: Meta<typeof Header> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LayoutScreen: Story = {
-	args: {
-		title: "Pages",
-	},
+export const Example: Story = {
+	args: { title: "Pages" },
 };
