@@ -1,0 +1,19 @@
+.clik-id__header {
+	border-bottom: 1px solid #ddd;
+	color: #222;
+	display: flex;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	gap: 8px;
+	line-height: normal;
+	padding: 8px 12px;
+}
+
+.clik-id__header i[class^="id-layout-icon-"] {
+	font-size: 16px;
+}
+
+.clik-id__header i[class^="id-layout-icon-"]::before {
+	color: #222;
+}

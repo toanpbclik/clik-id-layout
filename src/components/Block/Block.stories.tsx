@@ -6,7 +6,7 @@ import Slider from "../Slider";
 
 const meta: Meta<typeof BlockComponent> = {
 	component: BlockComponent,
-	title: "Components/Block",
+	title: "Layouts/Block",
 	tags: ["autodocs"],
 	argTypes: {
 		backgroundColor: { control: "color" },

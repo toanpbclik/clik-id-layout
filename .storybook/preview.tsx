@@ -9,6 +9,10 @@ import {
 	Stories,
 } from "@storybook/blocks";
 
+import "antd/dist/reset.css";
+// import "../src/resources/icon-config.css";
+// import "../src/resources/icon.css";
+
 const preview: Preview = {
 	parameters: {
 		actions: { argTypesRegex: "^on[A-Z].*" },

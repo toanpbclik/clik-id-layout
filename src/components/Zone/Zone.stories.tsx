@@ -5,7 +5,7 @@ import LayoutLevel from "../LayoutLevel/LayoutLevel";
 
 const meta: Meta<typeof LayoutLevel> = {
 	component: LayoutLevel,
-	title: "Components/Zone",
+	title: "Layouts/Zone",
 	tags: ["autodocs"],
 	argTypes: {
 		backgroundColor: { control: "color" },
