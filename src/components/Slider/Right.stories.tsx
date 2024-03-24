@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import LayoutLevel from "../LayoutLevel/LayoutLevel";
 import Slider from "./Slider";
+import LayoutLevel from "../LayoutLevel/LayoutLevel";
 
 const meta: Meta<typeof Slider> = {
 	component: Slider,

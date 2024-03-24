@@ -2,7 +2,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import BlockComponent from "./Block";
-import ContentComponent from "./Content";
 import Slider from "../Slider";
 
 const meta: Meta<typeof BlockComponent> = {
