@@ -17,12 +17,12 @@ export const Example: Story = {
 		<>
 			{[
 				{
-					userName: "Toan",
+					userName: "Clik",
 					message: "Hello world!",
 					timestamp: Date.now(),
 				},
 				{
-					userName: "Toan",
+					userName: "Clik",
 					message: "Hello world!",
 					timestamp: Date.now(),
 				},

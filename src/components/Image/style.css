@@ -1,0 +1,15 @@
+.clik-id__image {
+	height: fit-content;
+	width: fit-content;
+}
+
+.clik-id__image .ant-image {
+	height: 100%;
+	width: 100%;
+}
+
+.clik-id__image .ant-image .ant-image-img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}

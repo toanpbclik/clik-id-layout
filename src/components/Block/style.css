@@ -5,6 +5,7 @@
 }
 
 .clik-id__content {
+	align-content: flex-start;
 	box-sizing: border-box;
 	flex: 1 1 auto;
 	overflow-x: hidden;
@@ -17,8 +18,7 @@
 }
 
 .clik-id__slider .clik-id__content {
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 4px;
-	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-	grid-template-rows: repeat(auto-fill, minmax(100%, 1fr));
 }
