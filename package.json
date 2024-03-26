@@ -1,6 +1,6 @@
 {
 	"name": "clik-id-layout",
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"description": "Clik ID Layout Components",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",

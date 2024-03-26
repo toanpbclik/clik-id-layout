@@ -55,7 +55,7 @@ const ImageComponent = ({
 			width,
 			height,
 			aspectRatio:
-				height !== "auto" ? (aspectRatio === "1:1" ? "1 / 1" : "16 / 9") : "",
+				height === "auto" ? (aspectRatio === "1:1" ? "1 / 1" : "16 / 9") : "",
 			cursor:
 				props.onClick || props.onContextMenu || props.preview ? "pointer" : "",
 		}}
