@@ -18,7 +18,8 @@
 }
 
 .clik-id__slider .clik-id__content {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 	gap: 4px;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 12px 0 0;
 }

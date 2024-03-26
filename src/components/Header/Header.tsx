@@ -7,6 +7,14 @@ interface Props {
 	iconName?: string;
 	backgroundColor?: string;
 	color?: string;
+	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
 }
 
 /**
@@ -17,11 +25,14 @@ const Header = ({
 	iconName = "id-layout-icon-ListPlus",
 	backgroundColor = "#fff",
 	color = "#222",
+	id = "",
+	className = "",
 }: Props) => {
 	if (!title) return null;
 	return (
 		<div
-			className="clik-id__header"
+			id={id}
+			className={["clik-id__header", className].join(" ")}
 			style={{ backgroundColor, ["--clik-id-header--color" as string]: color }}
 		>
 			<i className={iconName} />

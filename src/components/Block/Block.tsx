@@ -24,6 +24,14 @@ interface Props extends React.CSSProperties {
 	 */
 	borderBottom?: string;
 	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
+	/**
 	 * Children Component
 	 */
 	children?: React.ReactNode;
@@ -38,12 +46,15 @@ const Block = ({
 	height = "34px",
 	padding = "8px 12px",
 	borderBottom = "1px solid rgba(34, 34, 34, 0.1)",
+	id = "",
+	className = "",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__block"
+			id={id}
+			className={["clik-id__block", className].join(" ")}
 			style={{
 				...props,
 				backgroundColor,

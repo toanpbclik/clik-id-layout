@@ -24,6 +24,14 @@ interface Props extends React.CSSProperties {
 	 */
 	border?: string;
 	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
+	/**
 	 * Children Component
 	 */
 	children?: React.ReactNode;
@@ -38,12 +46,15 @@ const Quotation = ({
 	height = "100%",
 	padding = "16px",
 	border = "1px solid rgba(34, 34, 34, 0.1)",
+	id = "",
+	className = "",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__quotation"
+			id={id}
+			className={["clik-id__quotation", className].join(" ")}
 			style={{
 				...props,
 				backgroundColor,

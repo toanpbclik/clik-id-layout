@@ -12,6 +12,14 @@ interface Props extends ImageProps {
 	 * CSS Property: width
 	 */
 	width?: string | number;
+	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
 }
 
 /**
@@ -21,15 +29,22 @@ const ImageComponent = ({
 	src,
 	aspectRatio = "1:1",
 	width = "100%",
+	id = "",
+	className = "",
 	...props
 }: Props) => {
 	if (!src) return null;
 	return (
 		<div
-			className="clik-id__image"
+			id={id}
+			className={["clik-id__image", className].join(" ")}
 			style={{
 				width,
 				aspectRatio: aspectRatio === "1:1" ? "1 / 1" : "16 / 9",
+				cursor:
+					props.onClick || props.onContextMenu || props.preview
+						? "pointer"
+						: "",
 			}}
 		>
 			<Image {...props} src={src} />

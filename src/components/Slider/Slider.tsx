@@ -25,13 +25,21 @@ interface Props extends React.CSSProperties {
 	 */
 	border?: string;
 	/**
-	 * Children Component
-	 */
-	children?: React.ReactNode;
-	/**
 	 * Flag to show/hide the slider
 	 */
 	isShown?: boolean;
+	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
+	/**
+	 * Children Component
+	 */
+	children?: React.ReactNode;
 }
 
 /**
@@ -44,15 +52,19 @@ const Slider = ({
 	border = "1px solid rgba(34, 34, 34, 0.1)",
 	width = "",
 	isShown = false,
+	id = "",
+	className = "",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
+			id={id}
 			className={[
 				"clik-id__slider",
 				`clik-id__slider--${mode}`,
 				isShown ? "clik-id__slider--shown" : "",
+				className,
 			].join(" ")}
 			style={{
 				...props,

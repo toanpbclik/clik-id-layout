@@ -24,6 +24,14 @@ interface Props extends React.CSSProperties {
 	 */
 	border?: string;
 	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
+	/**
 	 * Children Component
 	 */
 	children?: React.ReactNode;
@@ -38,12 +46,15 @@ const LayoutLevel = ({
 	height = "100%",
 	padding = 16,
 	border = "1px solid rgba(34, 34, 34, 0.1)",
+	id = "",
+	className = "",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
-			className="clik-id__layout-level"
+			id={id}
+			className={["clik-id__layout-level", className].join(" ")}
 			style={{
 				...props,
 				backgroundColor,

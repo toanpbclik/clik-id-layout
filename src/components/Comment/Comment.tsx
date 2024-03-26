@@ -9,16 +9,35 @@ interface Props {
 	userName: string;
 	message?: string;
 	timestamp?: number;
+	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 /**
  * Comment component
  */
-const Header = ({ userName, message = "", timestamp, onClick }: Props) => {
+const Header = ({
+	userName,
+	message = "",
+	timestamp,
+	id = "",
+	className = "",
+	onClick,
+}: Props) => {
 	if (!userName) return null;
 	return (
-		<div className="clik-id__comment" onClick={onClick}>
+		<div
+			id={id}
+			className={["clik-id__comment", className].join(" ")}
+			onClick={onClick}
+		>
 			<div className="comment__user">
 				<div className="comment__avatar">
 					{userName.slice(0, 1).toUpperCase()}

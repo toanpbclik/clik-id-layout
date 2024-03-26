@@ -24,6 +24,14 @@ interface Props extends React.CSSProperties {
 	 */
 	isScrollbarShown?: boolean;
 	/**
+	 * Custom element id
+	 */
+	id?: string;
+	/**
+	 * Custom element class
+	 */
+	className?: string;
+	/**
 	 * Children Component
 	 */
 	children?: React.ReactNode;
@@ -42,14 +50,18 @@ const Content = ({
 	height = "100%",
 	padding = "12px",
 	isScrollbarShown = false,
+	id = "",
+	className = "",
 	children,
 	...props
 }: Props) => {
 	return (
 		<div
+			id={id}
 			className={[
 				"clik-id__content",
 				isScrollbarShown ? "clik-id__content--scrollbar" : "",
+				className,
 			].join(" ")}
 			style={{
 				...props,
