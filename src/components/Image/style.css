@@ -1,5 +1,6 @@
 .clik-id__image {
 	height: fit-content;
+	position: relative;
 	width: fit-content;
 }
 
@@ -12,4 +13,11 @@
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
+}
+
+.clik-id__image .ant-empty {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }

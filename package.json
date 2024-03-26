@@ -1,7 +1,7 @@
 {
 	"name": "clik-id-layout",
-	"version": "0.0.13",
-	"description": "Artizen React Components Libarary",
+	"version": "0.0.15",
+	"description": "Clik ID Layout Components",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"files": [

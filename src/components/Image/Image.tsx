@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageProps } from "antd";
+import { Empty, Image, ImageProps } from "antd";
 
 import "./style.css";
 
@@ -20,6 +20,14 @@ interface Props extends ImageProps {
 	 * Custom element class
 	 */
 	className?: string;
+	/**
+	 * Show empty image
+	 */
+	isEmpty?: boolean;
+	/**
+	 * Empty message
+	 */
+	emptyMessage?: string;
 }
 
 /**
@@ -31,6 +39,8 @@ const ImageComponent = ({
 	width = "100%",
 	id = "",
 	className = "",
+	isEmpty = false,
+	emptyMessage = "No Image",
 	...props
 }: Props) => {
 	if (!src) return null;
@@ -47,7 +57,14 @@ const ImageComponent = ({
 						: "",
 			}}
 		>
-			<Image {...props} src={src} />
+			{!isEmpty ? (
+				<Image {...props} src={src} />
+			) : (
+				<Empty
+					description={emptyMessage}
+					image={Empty.PRESENTED_IMAGE_DEFAULT}
+				/>
+			)}
 		</div>
 	);
 };
