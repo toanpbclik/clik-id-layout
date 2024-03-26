@@ -13,6 +13,10 @@ interface Props extends ImageProps {
 	 */
 	width?: string | number;
 	/**
+	 * CSS Property: height
+	 */
+	height?: string | number;
+	/**
 	 * Custom element id
 	 */
 	id?: string;
@@ -37,36 +41,31 @@ const ImageComponent = ({
 	src,
 	aspectRatio = "1:1",
 	width = "100%",
+	height = "auto",
 	id = "",
 	className = "",
 	isEmpty = false,
 	emptyMessage = "No Image",
 	...props
-}: Props) => {
-	if (!src) return null;
-	return (
-		<div
-			id={id}
-			className={["clik-id__image", className].join(" ")}
-			style={{
-				width,
-				aspectRatio: aspectRatio === "1:1" ? "1 / 1" : "16 / 9",
-				cursor:
-					props.onClick || props.onContextMenu || props.preview
-						? "pointer"
-						: "",
-			}}
-		>
-			{!isEmpty ? (
-				<Image {...props} src={src} />
-			) : (
-				<Empty
-					description={emptyMessage}
-					image={Empty.PRESENTED_IMAGE_DEFAULT}
-				/>
-			)}
-		</div>
-	);
-};
+}: Props) => (
+	<div
+		id={id}
+		className={["clik-id__image", className].join(" ")}
+		style={{
+			width,
+			height,
+			aspectRatio:
+				height !== "auto" ? (aspectRatio === "1:1" ? "1 / 1" : "16 / 9") : "",
+			cursor:
+				props.onClick || props.onContextMenu || props.preview ? "pointer" : "",
+		}}
+	>
+		{!isEmpty ? (
+			<Image {...props} src={src} />
+		) : (
+			<Empty description={emptyMessage} image={Empty.PRESENTED_IMAGE_DEFAULT} />
+		)}
+	</div>
+);
 
 export default ImageComponent;
