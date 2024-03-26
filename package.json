@@ -1,72 +1,72 @@
 {
-  "name": "clik-id-layout",
-  "version": "0.0.3",
-  "description": "Artizen React Components Libarary",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "repository": "https://github.com/toanpbclik/clik-id-layout",
-  "homepage": "",
-  "author": "",
-  "license": "MIT",
-  "scripts": {
-    "rollup-build-lib": "rollup -c",
-    "storybook": "storybook dev -p 6006",
-    "storybook-docs": "storybook dev --docs",
-    "build-storybook": "storybook build",
-    "build-storybook-docs": "storybook build --docs"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.23.2",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.23.2",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@storybook/addon-essentials": "^8.0.4",
-    "@storybook/addon-interactions": "^8.0.4",
-    "@storybook/addon-links": "^8.0.4",
-    "@storybook/addon-styling": "^2.0.2-next.4",
-    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
-    "@storybook/blocks": "^8.0.4",
-    "@storybook/react": "^8.0.4",
-    "@storybook/react-webpack5": "^8.0.4",
-    "@storybook/test": "^8.0.4",
-    "@types/react": "^18.2.33",
-    "postcss": "^8.4.31",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^4.1.5",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "storybook": "^8.0.4",
-    "storybook-addon-deep-controls": "^0.6.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "keywords": [
-    "clik-id-layout",
-    "react",
-    "component",
-    "components",
-    "react-component",
-    "design",
-    "library",
-    "framework",
-    "frontend"
-  ],
-  "dependencies": {
-    "@ant-design/icons": "^5.3.5",
-    "antd": "^5.15.3",
-    "react-markdown": "^9.0.1"
-  }
+	"name": "clik-id-layout",
+	"version": "0.0.10",
+	"description": "Artizen React Components Libarary",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts",
+	"repository": "https://github.com/toanpbclik/clik-id-layout",
+	"homepage": "",
+	"author": "",
+	"license": "MIT",
+	"scripts": {
+		"rollup-build-lib": "rollup -c",
+		"storybook": "storybook dev -p 6006",
+		"storybook-docs": "storybook dev --docs",
+		"build-storybook": "storybook build",
+		"build-storybook-docs": "storybook build --docs"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.23.2",
+		"@babel/preset-react": "^7.22.15",
+		"@babel/preset-typescript": "^7.23.2",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.5",
+		"@storybook/addon-essentials": "^8.0.4",
+		"@storybook/addon-interactions": "^8.0.4",
+		"@storybook/addon-links": "^8.0.4",
+		"@storybook/addon-styling": "^2.0.2-next.4",
+		"@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+		"@storybook/blocks": "^8.0.4",
+		"@storybook/react": "^8.0.4",
+		"@storybook/react-webpack5": "^8.0.4",
+		"@storybook/test": "^8.0.4",
+		"@types/react": "^18.2.33",
+		"postcss": "^8.4.31",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup": "^4.1.5",
+		"rollup-plugin-dts": "^6.1.0",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.2",
+		"storybook": "^8.0.4",
+		"storybook-addon-deep-controls": "^0.6.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.2.2"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"keywords": [
+		"clik-id-layout",
+		"react",
+		"component",
+		"components",
+		"react-component",
+		"design",
+		"library",
+		"framework",
+		"frontend"
+	],
+	"dependencies": {
+		"@ant-design/icons": "^5.3.5",
+		"antd": "^5.15.3",
+		"react-markdown": "^9.0.1"
+	}
 }
